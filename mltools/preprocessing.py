@@ -77,6 +77,7 @@ class StandardScaler:
     def fit(self, X):
         u = np.mean(X, axis=0)
         s = np.std(X, axis=0)
+        u = np.where(s == 0, 0, u)  # not transform if std=0
         s = np.where(s == 0, 1, s)  # replace std=0 on 1
 
         self._u = u
