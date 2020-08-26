@@ -9,12 +9,12 @@ class Ridge:
     """
     Ridge regression.
     Parameters:
-        alpha :
-        solver :
-        w_len :
+        alpha : constant for regularization
+        solver : method to solve
+        w_len : length of one dimension
     Methods:
-        fit
-        predict
+        fit(X_train, y_train ... )
+        predict(X)
     """
     def __init__(self, alpha=1.0, solver='gd', w_len=100, init_w=None):
         self._w = init_w
